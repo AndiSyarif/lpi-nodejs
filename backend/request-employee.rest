@@ -1,0 +1,57 @@
+GET  http://localhost:5000/employees
+
+###
+GET  http://localhost:5000/employee/1
+
+
+###
+POST  http://localhost:5000/employees
+Content-Type: application/json
+
+    {
+        "id": "1001",
+        "name": "Andi",
+        "phone": "123456789",
+        "address": "Jakarta",
+        "position": "Owner",
+        "join_date" : "2021-10-10",
+        "salary": "10000000",
+        "Image": "Default.jpg"
+
+    }
+
+###
+POST  http://localhost:5000/employees
+Content-Type: application/json
+
+    {
+        "id": "1002",
+        "name": "Rudi",
+        "phone": "1112234567",
+        "address": "Surabaya",
+        "position": "Manager IT",
+        "join_date" : "2019-10-10",
+        "salary": "15000000",
+        "Image": "Rudi.jpg"
+    }
+
+
+###
+PATCH   http://localhost:5000/employee/1
+Content-Type: application/json
+
+{
+        "id": "1001",
+        "name": "Andis",
+        "phone": "1234456456",
+        "address": "Tangerang",
+        "position": "Owner",
+        "join_date" : "2021-10-10",
+        "salary": "10000000",
+        "Image": "Default.jpg"
+
+}
+
+
+###
+DELETE    http://localhost:5000/employee/3

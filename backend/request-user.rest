@@ -1,0 +1,54 @@
+GET  http://localhost:5000/users
+
+###
+GET  http://localhost:5000/user/1
+
+###
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+    {
+        "name": "Admin",
+        "email": "admin@mail.com",
+        "password": "123456",
+        "level": "1"
+    }
+
+###
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+    {
+        "name": "Andi",
+        "email": "andi@mail.com",
+        "password": "123456",
+        "level": "2"
+    }
+
+
+###
+PATCH   http://localhost:5000/user/1
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@mail.com",
+    "password": "123456",
+    "level": "2"
+
+}
+
+###
+PATCH   http://localhost:5000/user/2
+Content-Type: application/json
+
+{
+    "name": "Andi",
+    "email": "andi@mail.com",
+    "password": "123456",
+    "level": "2"
+
+}
+
+###
+DELETE    http://localhost:5000/user/2
