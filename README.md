@@ -11,7 +11,7 @@
 - Node JS
 - Express JS
 - NPM
-- Datanase Mysql
+- Database Mysql
 - Server Xampp/Laragon
 
 ## Installation
