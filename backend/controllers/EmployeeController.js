@@ -46,7 +46,9 @@ export const createEmployee = async (req, res) => {
     const file = req.files.file;
     const fileSize = file.data.length;
     const ext = path.extname(file.name);
-    const fileName = file.md5 + ext;
+    const timestamp = Date.now();
+    const randomString = Math.random().toString(36).substring(7);
+    const fileName = `${file.md5}_${timestamp}_${randomString}${ext}`;
     const url = `${req.protocol}://${req.get(
       "host"
     )}/employee/images/${fileName}`;
@@ -101,14 +103,14 @@ export const updateEmployee = async (req, res) => {
       return;
     }
 
-    let fileName = "";
-    if (req.files === null) {
-      fileName = Employee.image;
-    } else {
+    let fileName = employee.image;
+    if (req.files !== null) {
       const file = req.files.file;
       const fileSize = file.data.length;
       const ext = path.extname(file.name);
-      fileName = file.md5 + ext;
+      const timestamp = Date.now();
+      const randomString = Math.random().toString(36).substring(7);
+      fileName = `${file.md5}_${timestamp}_${randomString}${ext}`;
       const allowedType = [".jpg", ".jpeg"];
 
       if (!allowedType.includes(ext.toLocaleLowerCase()))

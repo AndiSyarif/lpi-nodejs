@@ -23,7 +23,7 @@ const User = db.define(
     },
     password: {
       type: DataTypes.STRING(100),
-      allowNull: false,
+      allowNull: true,
     },
     level: {
       type: DataTypes.STRING(2),
