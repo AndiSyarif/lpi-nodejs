@@ -40,8 +40,12 @@ const Employee = db.define(
       type: DataTypes.INTEGER(10),
       allowNull: false,
     },
-    Image: {
+    image: {
       type: DataTypes.STRING(100),
+      allowNull: true,
+    },
+    url: {
+      type: DataTypes.STRING,
       allowNull: true,
     },
   },
